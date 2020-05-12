@@ -1,0 +1,95 @@
+rootProject.name = 'research'
+
+// core language features
+include 'language'
+include 'language:core-java'
+include 'language:core-java-8'
+include 'language:core-java-9'
+include 'language:core-java-10'
+include 'language:core-java-11'
+include 'language:core-java-oop'
+include 'language:functional-programming'
+include 'language:core-java-collections'
+include 'language:core-java-io'
+include 'language:algorithms'
+include 'language:design-patterns'
+
+include 'language:concurrent-programming'
+include 'language:async-programming'
+include 'language:parallel-programming'
+
+// persistence
+include 'persistence'
+
+// relational db
+include 'persistence:sql'
+include 'persistence:postgresql'
+
+// nosql db
+include 'persistence:spring-mongo'
+
+// in memory db
+include 'persistence:spring-h2'
+
+// key value db
+include 'persistence:spring-boot-redis'
+
+// db migration
+include 'persistence:spring-liquibase'
+
+// data access
+include 'persistence:spring-jdbc'
+
+// jpa
+include 'persistence:spring-jpa'
+
+// hibernate
+include 'persistence:hibernate-5'
+include 'persistence:spring-hibernate-5'
+include 'persistence:spring-boot-hibernate'
+
+// spring data
+include 'persistence:spring-boot-postgresql'
+include 'persistence:spring-data-jpa'
+
+// batch processing
+include 'persistence:spring-batch'
+
+// web context
+include 'web'
+include 'web:spring-boot'
+include 'web:spring-data-rest'
+include 'web:spring-5'
+include 'web:spring-mvc-5'
+include 'web:spring-resttemplate'
+
+// web services
+include 'web:spring-rest'
+
+// testing
+include 'testing:mockito'
+include 'testing:mockito-2'
+
+// web security
+include 'security'
+include 'security:spring-security'
+
+// microservices
+include 'microservices'
+include 'microservices:spring-feign'
+
+// reactive-programming
+include 'reactive-programming'
+include 'reactive-programming:rx-java'
+
+// message services
+include 'message-services'
+include 'message-services:spring-jms'
+
+// network programming
+include 'network-programming'
+include 'network-programming:spring-websockets'
+
+// tech
+include 'tech'
+include 'tech:virtualization'
