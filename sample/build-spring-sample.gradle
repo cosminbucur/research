@@ -10,7 +10,7 @@ buildscript {
 
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.2.7.RELEASE'
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
@@ -38,5 +38,4 @@ dependencies {
     testAnnotationProcessor"org.projectlombok:lombok:${lombokVersion}"
     
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
 }
