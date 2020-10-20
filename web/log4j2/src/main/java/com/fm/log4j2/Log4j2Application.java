@@ -4,8 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-public class Sl4j2Application {
-    private static Logger logger = LogManager.getLogger(Sl4j2Application.class);
+public class Log4j2Application {
+    private static Logger logger = LogManager.getLogger(Log4j2Application.class);
 
     public static void main(String[] args) {
 

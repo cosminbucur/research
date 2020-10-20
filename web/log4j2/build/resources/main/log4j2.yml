@@ -13,21 +13,19 @@ Configuration:
       fileName: log/logfile.log
       PatternLayout:
         Pattern: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+
+
   Loggers:
-    logger:
-    -
-      name: com.example
-      level: error
-      additivity: false
-      AppenderRef:
-        ref: Console
-    -
-      name: com.example
-      level: trace
-#      additivity: true
-      AppenderRef:
-        ref: File
     Root:
-      level: error
+      level: debug
       AppenderRef:
-        ref: Console
+        - ref: Console
+    Logger:
+      - name: com.fm.log4j2
+        additivity: false
+        level: debug
+        AppenderRef:
+          - ref: Console
+            level: info
+          - ref: File
+            level: error
