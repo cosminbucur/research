@@ -1,8 +1,10 @@
 .gradle
 !gradle/wrapper/gradle-wrapper.jar
 
-/build/
+*/build/
+*/*/build/
 */out/
+*/*/out/
 */logs/
 
 ### IntelliJ IDEA ###
@@ -10,3 +12,4 @@
 *.iws
 *.iml
 *.ipr
+

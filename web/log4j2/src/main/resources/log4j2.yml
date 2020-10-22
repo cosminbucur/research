@@ -10,22 +10,23 @@ Configuration:
 
     File:
       name: File
-      fileName: log/logfile.log
+      fileName: web/log4j2/logs/application-${date:yyyyMMdd}.log
+      append: true
       PatternLayout:
         Pattern: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
-
 
   Loggers:
     Root:
       level: debug
       AppenderRef:
         - ref: Console
+    # logger for main package
     Logger:
       - name: com.fm.log4j2
         additivity: false
         level: debug
         AppenderRef:
           - ref: Console
-            level: info
-          - ref: File
             level: error
+          - ref: File
+            level: info

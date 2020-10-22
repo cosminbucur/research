@@ -1,2 +1,0 @@
-22:29:56.029 [main] ERROR com.fm.log4j2.Log4j2Application - this is an ERROR message
-22:29:56.029 [main] FATAL com.fm.log4j2.Log4j2Application - this is a FATAL message

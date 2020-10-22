@@ -1,2 +1,0 @@
-com/fm/log4j2/Log4j2Application.java
- com.fm.log4j2.Log4j2Application
