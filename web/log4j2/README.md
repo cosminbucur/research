@@ -6,11 +6,7 @@
 
 # Concepts
 
-Slf4j is a wrapper on top of other logging frameworks.
-
 Log4j2 is the real logging framework.
-
-Slf4j makes the code framework agnostic.
 
 ## Logging levels
 

@@ -1,0 +1,32 @@
+Configuration:
+  status: warn
+
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+
+    File:
+      name: File
+      fileName: web/slf4j/logs/application-${date:yyyyMMdd}.log
+      append: true
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+
+  Loggers:
+    Root:
+      level: debug
+      AppenderRef:
+        - ref: Console
+    # logger for main package
+    Logger:
+      - name: com.fm.slf4j
+        additivity: false
+        level: debug
+        AppenderRef:
+          - ref: Console
+            level: error
+          - ref: File
+            level: info
