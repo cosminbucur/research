@@ -22,6 +22,7 @@ include 'language:parallel-programming'
 include 'persistence'
 
 // relational db
+include 'persistence:jdbc'
 include 'persistence:sql'
 include 'persistence:postgresql'
 
