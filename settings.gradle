@@ -22,9 +22,26 @@ include 'language:parallel-programming'
 include 'persistence'
 
 // relational db
-include 'persistence:jdbc'
 include 'persistence:sql'
 include 'persistence:postgresql'
+
+// data access
+include 'persistence:jdbc'
+include 'persistence:spring-jdbc'
+
+// jpa hibernate
+include 'persistence:jpa-hibernate'
+
+// hibernate
+include 'persistence:hibernate'
+include 'persistence:spring-hibernate'
+include 'persistence:spring-boot-hibernate'
+
+// spring data
+include 'persistence:spring-data-jdbc'
+include 'persistence:spring-data-jpa'   // jakarta
+include 'persistence:spring-data-jpa-hibernate'
+include 'persistence:spring-boot-postgresql'
 
 // nosql db
 include 'persistence:spring-mongo'
@@ -37,21 +54,6 @@ include 'persistence:spring-boot-redis'
 
 // db migration
 include 'persistence:spring-liquibase'
-
-// data access
-include 'persistence:spring-jdbc'
-
-// jpa
-include 'persistence:spring-jpa'
-
-// hibernate
-include 'persistence:hibernate-5'
-include 'persistence:spring-hibernate-5'
-include 'persistence:spring-boot-hibernate'
-
-// spring data
-include 'persistence:spring-boot-postgresql'
-include 'persistence:spring-data-jpa'
 
 // batch processing
 include 'persistence:spring-batch'
