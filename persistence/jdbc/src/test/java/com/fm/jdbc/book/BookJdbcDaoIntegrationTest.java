@@ -1,4 +1,4 @@
-package com.fm.jdbc;
+package com.fm.jdbc.book;
 
 import org.junit.jupiter.api.Test;
 
