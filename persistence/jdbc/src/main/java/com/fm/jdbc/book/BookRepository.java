@@ -1,4 +1,4 @@
-package com.fm.jdbc.user;
+package com.fm.jdbc.book;
 
 import java.util.List;
 import java.util.Optional;

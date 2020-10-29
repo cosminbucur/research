@@ -1,4 +1,4 @@
-package com.fm.jdbc.user;
+package com.fm.jdbc.book;
 
 public class Book {
 

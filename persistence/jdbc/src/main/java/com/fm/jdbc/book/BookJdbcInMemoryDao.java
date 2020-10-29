@@ -1,12 +1,16 @@
-package com.fm.jdbc.user;
+package com.fm.jdbc.book;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 // TODO: implement this using jdbc prepared statements
-// use a mysql database
-// use try with resources
-public class BookJdbcMysqlDao implements BookRepository {
+// use a map as an in-memory database
+// do not use try with resources
+public class BookJdbcInMemoryDao implements BookRepository {
+
+    private static Map<Long, Book> db = new HashMap<>();
 
     @Override
     public Book create(Book book) {
