@@ -13,6 +13,22 @@ public class Book {
     // publishDate
     private LocalDate publishDate;
 
+    public Book() {
+    }
+
+    public Book(Long id, String title, String author, LocalDate publishDate) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.publishDate = publishDate;
+    }
+
+    public Book(String title, String author, LocalDate publishDate) {
+        this.title = title;
+        this.author = author;
+        this.publishDate = publishDate;
+    }
+
     public Long getId() {
         return id;
     }
@@ -43,5 +59,15 @@ public class Book {
 
     public void setPublishDate(LocalDate publishDate) {
         this.publishDate = publishDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", publishDate=" + publishDate +
+                '}';
     }
 }

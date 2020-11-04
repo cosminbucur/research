@@ -1,0 +1,6 @@
+21:02:44.696 [main] INFO  com.fm.jdbc.JdbcApplication -  === connection established === 
+21:04:08.025 [main] INFO  com.fm.jdbc.JdbcApplication - connection established
+21:07:54.118 [main] INFO  com.fm.jdbc.JdbcApplication - connection established
+21:10:52.675 [main] INFO  com.fm.jdbc.JdbcApplication - connection established
+21:11:51.686 [main] INFO  com.fm.jdbc.JdbcApplication - connection established
+22:20:46.840 [main] INFO  com.fm.jdbc.JdbcApplication - connection established

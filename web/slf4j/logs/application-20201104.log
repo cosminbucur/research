@@ -1,0 +1,3 @@
+22:20:32.965 [main] INFO  com.fm.slf4j.Slf4jApplication - this is an INFO message
+22:20:32.966 [main] WARN  com.fm.slf4j.Slf4jApplication - this is a WARN message
+22:20:32.967 [main] ERROR com.fm.slf4j.Slf4jApplication - this is an ERROR message

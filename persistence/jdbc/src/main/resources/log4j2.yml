@@ -27,6 +27,6 @@ Configuration:
         level: debug
         AppenderRef:
           - ref: Console
-            level: error
+            level: info
           - ref: File
             level: info
