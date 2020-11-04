@@ -1,0 +1,6 @@
+10:48:40.440 [main] INFO  com.fm.slf4j.Slf4jApplication - this is an INFO message
+10:48:40.442 [main] WARN  com.fm.slf4j.Slf4jApplication - this is a WARN message
+10:48:40.442 [main] ERROR com.fm.slf4j.Slf4jApplication - this is an ERROR message
+10:54:58.553 [main] INFO  com.fm.slf4j.Slf4jApplication - this is an INFO message
+10:54:58.555 [main] WARN  com.fm.slf4j.Slf4jApplication - this is a WARN message
+10:54:58.555 [main] ERROR com.fm.slf4j.Slf4jApplication - this is an ERROR message

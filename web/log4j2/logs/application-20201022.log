@@ -1,0 +1,12 @@
+16:28:13.895 [main] INFO  com.fm.log4j2.Log4j2Application - this is an INFO message
+16:28:13.897 [main] WARN  com.fm.log4j2.Log4j2Application - this is a WARN message
+16:28:13.897 [main] ERROR com.fm.log4j2.Log4j2Application - this is an ERROR message
+16:28:13.897 [main] FATAL com.fm.log4j2.Log4j2Application - this is a FATAL message
+16:29:50.041 [main] INFO  com.fm.log4j2.Log4j2Application - this is an INFO message
+16:29:50.042 [main] WARN  com.fm.log4j2.Log4j2Application - this is a WARN message
+16:29:50.043 [main] ERROR com.fm.log4j2.Log4j2Application - this is an ERROR message
+16:29:50.043 [main] FATAL com.fm.log4j2.Log4j2Application - this is a FATAL message
+16:32:54.132 [main] INFO  com.fm.log4j2.Log4j2Application - this is an INFO message
+16:32:54.133 [main] WARN  com.fm.log4j2.Log4j2Application - this is a WARN message
+16:32:54.133 [main] ERROR com.fm.log4j2.Log4j2Application - this is an ERROR message
+16:32:54.134 [main] FATAL com.fm.log4j2.Log4j2Application - this is a FATAL message

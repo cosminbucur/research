@@ -24,6 +24,15 @@ repositories {
 }
 
 dependencies {
+
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+    implementation 'org.apache.logging.log4j:log4j-api:2.11.2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.11.2'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.2'
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.5.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
     testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
     testImplementation 'org.assertj:assertj-core:3.17.2'
     testImplementation 'org.mockito:mockito-core:3.5.13'

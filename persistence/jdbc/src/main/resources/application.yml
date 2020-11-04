@@ -1,5 +1,5 @@
 # TODO: load the mysql db properties from here
-jdbc:
-  url:
+#jdbc:
+  url: jdbc:mysql://localhost:3306/bookapp?serverTimezone=UTC
   username: root
   password: root
