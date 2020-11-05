@@ -15,7 +15,7 @@ public interface BookRepository {
 
     Optional<Book> findByTitle(String title);
 
-    Book update(Long id, Book book);
+    void update(Long id, Book book);
 
     void delete(Long id);
 

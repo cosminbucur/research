@@ -38,8 +38,8 @@ public class BookJdbcInMemoryDao implements BookRepository {
     }
 
     @Override
-    public Book update(Long id, Book book) {
-        return null;
+    public void update(Long id, Book book) {
+
     }
 
     @Override

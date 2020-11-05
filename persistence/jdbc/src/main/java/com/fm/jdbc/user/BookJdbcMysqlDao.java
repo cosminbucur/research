@@ -26,7 +26,7 @@ public class BookJdbcMysqlDao implements BookRepository {
             statement.setString(2, book.getAuthor());
             statement.setDate(3, Date.valueOf(book.getPublishDate()));
             boolean flag = statement.execute();
-            if (flag){
+            if (flag) {
                 System.out.println("book creted");
             }
         } catch (SQLException exc) {
@@ -41,7 +41,8 @@ public class BookJdbcMysqlDao implements BookRepository {
         propertiesLoader.loadProperties();
         List<Book> books = new ArrayList<>();
         String query = "SELECT id, title, author,publish_date FROM book";
-        try (Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username, propertiesLoader.password);
+        try (Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username,
+                propertiesLoader.password);
              PreparedStatement statement = connection.prepareStatement(query)) {
             ResultSet resultSet = statement.executeQuery();
 
@@ -62,22 +63,104 @@ public class BookJdbcMysqlDao implements BookRepository {
 
     @Override
     public List<Book> findByAuthor(String author) {
-        return null;
+        PropertiesLoader propertiesLoader = new PropertiesLoader();
+        propertiesLoader.loadProperties();
+        List<Book> books = new ArrayList<>();
+        String query = "SELECT id, title, author,publish_date FROM book WHERE author = ?";
+        try (Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username,
+                propertiesLoader.password);
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1,author);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                Long id = resultSet.getLong("id");
+                String title = resultSet.getString("title");
+                LocalDate publishDate = LocalDate.parse(resultSet.getString("publish_date"));
+                Book book = new Book(id, title, author, publishDate);
+                books.add(book);
+            }
+
+        } catch (SQLException exc) {
+            exc.printStackTrace();
+        }
+        return books;
     }
 
     @Override
     public Optional<Book> findById(Long id) {
-        return Optional.empty();
+        PropertiesLoader propertiesLoader = new PropertiesLoader();
+        propertiesLoader.loadProperties();
+        String query = "SELECT title, author, publish_date FROM book where id = ?";
+        Book book = new Book();
+        try (Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username,
+                propertiesLoader.password);
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setLong(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                book.setId(id);
+                book.setTitle(resultSet.getString("title"));
+                book.setAuthor(resultSet.getString("author"));
+                book.setPublishDate(LocalDate.parse(resultSet.getString("publish_date")));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Optional.of(book);
+
     }
 
     @Override
     public Optional<Book> findByTitle(String title) {
-        return Optional.empty();
+        PropertiesLoader propertiesLoader = new PropertiesLoader();
+        propertiesLoader.loadProperties();
+        String query = "SELECT id,title, author, publish_date FROM book WHERE title = ?";
+        Book book = new Book();
+        try (Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username,
+                propertiesLoader.password);
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, title);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                book.setId(resultSet.getLong("id"));
+                book.setTitle(resultSet.getString("title"));
+                book.setAuthor(resultSet.getString("author"));
+                book.setPublishDate(LocalDate.parse(resultSet.getString("publish_date")));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Optional.of(book);
+
     }
 
     @Override
-    public Book update(Long id, Book book) {
-        return null;
+    public void update(Long id, Book book) {
+        PropertiesLoader propertiesLoader = new PropertiesLoader();
+        propertiesLoader.loadProperties();
+        String query = "UPDATE book SET title =?, author =?, publish_date = ? WHERE id =?";
+        try (Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username,
+                propertiesLoader.password);
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+           statement.setString(1,book.getTitle());
+           statement.setString(2,book.getAuthor());
+           statement.setDate(3, Date.valueOf((book.getPublishDate())));
+           statement.setLong(4,id);
+            boolean flag = statement.execute();
+            if (flag) {
+                System.out.println("book has been updated");
+            }
+        } catch (SQLException e) {
+            System.out.println("book not updated");
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -85,14 +168,15 @@ public class BookJdbcMysqlDao implements BookRepository {
         PropertiesLoader propertiesLoader = new PropertiesLoader();
         propertiesLoader.loadProperties();
         String query = "DELETE FROM book WHERE id=?";
-        try(Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username ,propertiesLoader.password);
-        PreparedStatement statement= connection.prepareStatement(query)){
+        try (Connection connection = DriverManager.getConnection(propertiesLoader.url, propertiesLoader.username,
+                propertiesLoader.password);
+             PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setLong(1, id);
             boolean flag = statement.execute();
-            if (flag){
+            if (flag) {
                 System.out.println("book deleted");
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("book not deleted");
         }
     }
