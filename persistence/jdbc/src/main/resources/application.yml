@@ -1,0 +1,5 @@
+# TODO: load the mysql db properties from here
+jdbc:
+  url:
+  username: root
+  password: root
