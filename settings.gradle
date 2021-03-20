@@ -67,6 +67,7 @@ include 'web:spring-mvc-5'
 include 'web:spring-resttemplate'
 include 'web:log4j2'
 include 'web:slf4j'
+include 'web:logback'
 
 // web services
 include 'web:spring-rest'

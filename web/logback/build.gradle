@@ -24,9 +24,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.apache.logging.log4j:log4j-api:2.11.2'
-    implementation 'org.apache.logging.log4j:log4j-core:2.11.2'
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.0-rc1'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'org.codehaus.groovy:groovy:3.0.7'
 
     testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
     testImplementation 'org.assertj:assertj-core:3.17.2'
